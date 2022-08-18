@@ -1,0 +1,24 @@
+{
+    "name": "andrewdyer/filtering",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Dyer",
+            "email": "andrewdyer@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Anddye\\Filtering\\": "src/"
+        }
+    },
+    "require": {},
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
