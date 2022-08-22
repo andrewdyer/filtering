@@ -9,8 +9,18 @@ class AccessFilter extends Filter
 {
     public function filter(Builder $builder, $value): Builder
     {
-        $builder->where('free', $value);
+        if ($value = $this->resolveFilterValue($value)) {
+            $builder->where('free', $value);
+        }
 
         return $builder;
+    }
+
+    protected function mappings(): array
+    {
+        return [
+            'free' => true,
+            'premium' => false,
+        ];
     }
 }
