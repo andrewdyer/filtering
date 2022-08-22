@@ -16,7 +16,7 @@ Licensed under MIT. Totally free for private or commercial projects.
 composer require andrewdyer/filtering
 ```
 
-## Usage
+## Basic Usage
 
 ```php
 $courses = Course::filter($request->getQueryParams())->get();
@@ -44,7 +44,7 @@ class AccessFilter extends Filter
 namespace App\Filterers;
 
 use Anddye\Filtering\Filterer;
-use Anddye\Filters\AccessFilter;
+use App\Filters\AccessFilter;
 
 class CourseFilterer extends Filterer
 {
