@@ -18,8 +18,8 @@ abstract class Filterer
 
     public function filter(Builder $builder, array $filters = []): Builder
     {
-        foreach ($this->getFilteredFilters($filters) as $filter => $class) {
-            $this->resolveFilter($filter);
+        foreach ($this->getFilteredFilters($filters) as $filter => $value) {
+            $this->resolveFilter($filter)->filter($builder, $value);
         }
 
         return $builder;
@@ -42,7 +42,7 @@ abstract class Filterer
         return array_filter($filteredFilters);
     }
 
-    private function resolveFilter(string $filter)
+    private function resolveFilter(string $filter): Filter
     {
         if ($class = Arr::get($this->filters, $filter)) {
             return new $class();
