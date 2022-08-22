@@ -8,8 +8,6 @@
     <a href="https://packagist.org/packages/andrewdyer/filtering"><img src="https://poser.pugx.org/andrewdyer/filtering/license?style=for-the-badge" alt="License"></a>
 </p>
 
-A super tidy and easy to extend solution for filtering Laravel database results with a query string.
-
 ## License
 Licensed under MIT. Totally free for private or commercial projects.
 
