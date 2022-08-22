@@ -42,7 +42,7 @@ abstract class Filterer
         return array_filter($filteredFilters);
     }
 
-    private function resolveFilter(string $filter): Filter
+    private function resolveFilter(string $filter): FilterInterface
     {
         if ($class = Arr::get($this->filters, $filter)) {
             return new $class();

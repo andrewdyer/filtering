@@ -2,10 +2,10 @@
 
 namespace Anddye\Filtering\Tests;
 
+use Anddye\Filtering\FilterException;
 use Anddye\Filtering\Tests\Fixtures\Filterers\CourseFilterer;
 use Anddye\Filtering\Tests\Fixtures\Filters\AccessFilter;
 use Anddye\Filtering\Tests\Fixtures\Filters\DifficultyFilter;
-use Anddye\Filtering\FilterException;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 

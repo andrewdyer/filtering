@@ -2,10 +2,10 @@
 
 namespace Anddye\Filtering\Tests\Fixtures\Filters;
 
-use Anddye\Filtering\Filter;
+use Anddye\Filtering\FilterInterface;
 use Illuminate\Database\Eloquent\Builder;
 
-class DifficultyFilter extends Filter
+class DifficultyFilter implements FilterInterface
 {
     public function filter(Builder $builder, $value): Builder
     {

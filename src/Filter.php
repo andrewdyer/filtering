@@ -2,13 +2,10 @@
 
 namespace Anddye\Filtering;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
 
-abstract class Filter
+abstract class Filter implements FilterInterface
 {
-    abstract public function filter(Builder $builder, $value): Builder;
-
     protected function mappings(): array
     {
         return [];
