@@ -4,6 +4,6 @@ namespace Anddye\Filtering;
 
 use Exception;
 
-class UnresolvedFilterException extends Exception
+class FilterException extends Exception
 {
 }

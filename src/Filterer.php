@@ -48,6 +48,6 @@ abstract class Filterer
             return new $class();
         }
 
-        throw new UnresolvedFilterException();
+        throw new FilterException();
     }
 }

@@ -5,7 +5,7 @@ namespace Anddye\Filtering\Tests;
 use Anddye\Filtering\Tests\Fixtures\Filterers\CourseFilterer;
 use Anddye\Filtering\Tests\Fixtures\Filters\AccessFilter;
 use Anddye\Filtering\Tests\Fixtures\Filters\DifficultyFilter;
-use Anddye\Filtering\UnresolvedFilterException;
+use Anddye\Filtering\FilterException;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 
@@ -53,7 +53,7 @@ final class FiltererTest extends TestCase
 
     public function testExceptionIsThrownIfCannotResolveFilter(): void
     {
-        $this->expectException(UnresolvedFilterException::class);
+        $this->expectException(FilterException::class);
 
         $filterer = new CourseFilterer();
 
