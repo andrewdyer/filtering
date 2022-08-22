@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andrewdyer/filtering/67d4d06ca19bd08f883eeb1c2696776760fd0153/.github/logo.png" alt="Filtering" />
+  <img src="https://raw.githubusercontent.com/andrewdyer/filtering/cae75d3a42f1556e3a7816876722d51810a7a426/.github/logo.png" alt="Filtering" />
 </p>
 
 <p align="center">
