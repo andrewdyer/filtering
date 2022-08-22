@@ -9,6 +9,13 @@ abstract class Filterer
 {
     protected array $filters;
 
+    public function addFilters(array $filters): self
+    {
+        $this->filters = array_merge($this->filters, $filters);
+
+        return $this;
+    }
+
     public function filter(Builder $builder, array $filters = []): Builder
     {
         foreach ($this->getFilteredFilters($filters) as $filter => $class) {

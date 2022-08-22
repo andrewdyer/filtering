@@ -4,6 +4,7 @@ namespace Anddye\Filtering\Tests;
 
 use Anddye\Filtering\Tests\Fixtures\Filterers\CourseFilterer;
 use Anddye\Filtering\Tests\Fixtures\Filters\AccessFilter;
+use Anddye\Filtering\Tests\Fixtures\Filters\DifficultyFilter;
 use Anddye\Filtering\UnresolvedFilterException;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
@@ -21,6 +22,20 @@ final class FiltererTest extends TestCase
         $result = $method->invokeArgs($filterer, [['access' => 'free', 'hello' => 'world', '' => '']]);
 
         $this->assertEquals(['access' => 'free'], $result);
+    }
+
+    public function testCanProgrammaticallyAddFilters(): void
+    {
+        $filterer = new CourseFilterer();
+        $filterer->addFilters(['difficulty' => DifficultyFilter::class]);
+
+        $class = new ReflectionClass($filterer);
+        $method = $class->getMethod('getFilteredFilters');
+        $method->setAccessible(true);
+
+        $result = $method->invokeArgs($filterer, [['access' => 'free', 'difficulty' => 'beginner']]);
+
+        $this->assertEquals(['access' => 'free', 'difficulty' => 'beginner'], $result);
     }
 
     public function testCanResolveFilter(): void
