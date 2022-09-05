@@ -1,5 +1,7 @@
 <h1 align="center">Filtering</h1>
 
+<p align="center">A super tidy and easy to extend solution for filtering Laravel database results with a query string.</p>
+
 <p align="center">
     <a href="https://packagist.org/packages/andrewdyer/filtering"><img src="https://poser.pugx.org/andrewdyer/filtering/downloads?style=for-the-badge" alt="Total Downloads"></a>
     <a href="https://packagist.org/packages/andrewdyer/filtering"><img src="https://poser.pugx.org/andrewdyer/filtering/v?style=for-the-badge" alt="Latest Stable Version"></a>
