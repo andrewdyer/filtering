@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrewdyer/filtering/cae75d3a42f1556e3a7816876722d51810a7a426/.github/logo.png" alt="Filtering" />
-</p>
+<h1 align="center">Filtering</h1>
 
 <p align="center">
     <a href="https://packagist.org/packages/andrewdyer/filtering"><img src="https://poser.pugx.org/andrewdyer/filtering/downloads?style=for-the-badge" alt="Total Downloads"></a>
