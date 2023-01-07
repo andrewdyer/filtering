@@ -39,7 +39,9 @@ abstract class Filterer
             }
         }
 
-        return array_filter($filteredFilters);
+        return array_filter($filteredFilters, function ($v) {
+            return !in_array($v, [false, null, ''], true);
+        });
     }
 
     private function resolveFilter(string $filter): FilterInterface
